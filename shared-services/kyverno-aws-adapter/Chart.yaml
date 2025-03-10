@@ -1,0 +1,16 @@
+apiVersion: v2
+appVersion: v0.3.0
+description: Helm chart for the Kyverno AWS Adapter
+keywords:
+- kubernetes
+- nirmata
+- kyverno
+- aws
+- adapter
+- policy
+maintainers:
+- name: Nirmata
+  url: https://nirmata.com/
+name: kyverno-aws-adapter
+type: application
+version: v0.3.0
