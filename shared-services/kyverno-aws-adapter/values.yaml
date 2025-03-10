@@ -9,7 +9,7 @@ nameOverride:
 fullnameOverride:
 
 # -- Role for accessing AWS API (REQUIRED)
-roleArn:
+roleArn: arn:aws:iam::820537372947:role/InfrastructureStack-EKSClusterNodegroupDefaultCapac-rDjnPPBY9rIa
 
 # -- Interval at which the controller reconciles in minutes
 pollInterval: 30
