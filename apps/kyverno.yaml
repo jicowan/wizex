@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: kyverno
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/jicowan/wizex.git
+    path: shared-services/kyverno
+    targetRevision: HEAD
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: kyverno
+  syncPolicy:
+  automated: {}
+  syncOptions:
+    - CreateNamespace=true
+    - ServerSideApply=true

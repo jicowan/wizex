@@ -8,6 +8,6 @@ spec:
     namespace: argocd
   source:
     path: apps
-    repoURL: 'https://github.com/jicowan/wizex/shared-services/'
+    repoURL: 'https://github.com/jicowan/wizex/apps'
     targetRevision: HEAD
   project: default
