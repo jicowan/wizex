@@ -177,7 +177,7 @@ emptyDir:
 ## Drone server.
 ##
 extraSecretNamesForEnvFrom: []
-# - my-drone-secrets
+  - my-drone-secrets
 
 ## The keys within the "env" map are mounted as environment variables on the Drone server pod.
 ## See the full reference of Drone server environment variables here:
@@ -187,7 +187,7 @@ env:
   ## REQUIRED: Set the user-visible Drone hostname, sans protocol.
   ## Ref: https://docs.drone.io/installation/reference/drone-server-host/
   ##
-  DRONE_SERVER_HOST: ""
+  DRONE_SERVER_HOST: "drone"
   ## The protocol to pair with the value in DRONE_SERVER_HOST (http or https).
   ## Ref: https://docs.drone.io/installation/reference/drone-server-proto/
   ##
