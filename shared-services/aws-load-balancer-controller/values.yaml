@@ -116,7 +116,7 @@ additionalLabels: {}
 enableCertManager: false
 
 # The name of the Kubernetes cluster. A non-empty value is required
-clusterName: EKSClusterD2B89B38-7060780f27654caeac35af1c0a810fc6
+clusterName: EKSClusterD2B89B38-1111ecba155e4872bcca6fbe466ac724
 
 # cluster contains configurations specific to the kubernetes cluster
 cluster:
