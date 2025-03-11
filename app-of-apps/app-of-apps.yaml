@@ -3,11 +3,11 @@ kind: Application
 metadata:
   name: app-of-apps
 spec:
+  project: default
   destination:
-    name: in-cluster
+    name: https://kubernetes.default.svc
     namespace: argocd
   source:
     path: apps
-    repoURL: 'https://github.com/jicowan/wizex/apps'
+    repoURL: 'https://github.com/jicowan/wizex.git'
     targetRevision: HEAD
-  project: default
