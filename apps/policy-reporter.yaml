@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: policy-reporter
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/jicowan/wizex.git
+    path: shared-services/policy-reporter
+    targetRevision: HEAD
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: policy-reporter
+  syncPolicy:
+  automated: {}
