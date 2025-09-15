@@ -219,17 +219,15 @@ authScripts:
     auth1.sh: |
       #!/bin/sh
       set -e
-      # ensure AWS creds & region are set, or passed in via environment
       TOKEN=$(aws ecr get-authorization-token --region us-west-2 --output text
       --query 'authorizationData[0].authorizationToken')
       if [ -z "$TOKEN" ]; then
         echo "Error: got empty token" >&2
         exit 1
       fi
-      # decode
-      # Note: "base64 --decode" vs "base64 -d" depends on distro
+      
       USERPASS=$(echo "$TOKEN" | base64 -d)
-      `echo -n "$USERPASS"
+      echo -n "$USERPASS"
     # auth2.sh: |
     #   #!/bin/sh
     #   echo "auth script 2 here"
