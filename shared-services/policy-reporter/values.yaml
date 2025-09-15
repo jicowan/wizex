@@ -952,7 +952,7 @@ tmpVolume: {}
 
 ui:
   # -- (bool) Enable Policy Reporter UI
-  enabled: false
+  enabled: true
   image:
     # -- (string) Image registry
     registry: ghcr.io
@@ -1295,7 +1295,7 @@ ui:
 plugin:
   kyverno:
     # -- (bool) Enable Kyverno Plugin
-    enabled: false
+    enabled: true
     image:
       # -- (string) Image registry
       registry: ghcr.io
