@@ -9,7 +9,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/jicowan/tasky.git
-    path: deploy
+    path: helm/tasky-chart
     targetRevision: HEAD
   destination:
     server: https://kubernetes.default.svc
