@@ -219,8 +219,7 @@ authScripts:
     auth1.sh: |
       #!/bin/sh
       set -e
-      TOKEN=$(aws ecr get-authorization-token --region us-west-2 --output text
-      --query 'authorizationData[0].authorizationToken')
+      TOKEN=$(aws ecr get-authorization-token --region us-west-2 --output text --query 'authorizationData[0].authorizationToken')
       if [ -z "$TOKEN" ]; then
         echo "Error: got empty token" >&2
         exit 1
