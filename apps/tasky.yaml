@@ -6,7 +6,7 @@ metadata:
   annotations:
     argocd-image-updater.argoproj.io/image-list: 314146332292.dkr.ecr.us-west-2.amazonaws.com/tasky:~0.0
     argocd-image-updater.argoproj.io/write-back-method: argocd
-    argocd-image-updater.argoproj.io/update-strategy: newest-build
+    argocd-image-updater.argoproj.io/update-strategy: semver
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
